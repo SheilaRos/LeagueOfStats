@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //dffg
     func downloadPlayerInfo(){
         let url = URL(string: "https://euw.api.pvp.net/api/lol/euw/v1.3/game/by-summoner/35968635/recent?api_key=RGAPI-3a39327e-3d10-42c6-87b6-eb4ef96168a3")
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: url!)
