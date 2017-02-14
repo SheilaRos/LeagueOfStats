@@ -7,14 +7,20 @@
 //
 
 import UIKit
-
+var invocador = ""
 class ViewController: UIViewController {
-    //no me deja hacer commits...asi no se puede...
+    
+    @IBOutlet weak var textoInvocador: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func entrar(_ sender: UIButton) {
+        invocador = textoInvocador.text!
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

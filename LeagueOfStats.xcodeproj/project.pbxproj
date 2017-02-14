@@ -14,6 +14,7 @@
 		3359D8751E538B6D002707E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3359D8731E538B6D002707E6 /* LaunchScreen.storyboard */; };
 		3359D8801E538B6D002707E6 /* LeagueOfStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359D87F1E538B6D002707E6 /* LeagueOfStatsTests.swift */; };
 		3359D88B1E538B6D002707E6 /* LeagueOfStatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3359D88A1E538B6D002707E6 /* LeagueOfStatsUITests.swift */; };
+		3359D89B1E53916B002707E6 /* lol.png in Resources */ = {isa = PBXBuildFile; fileRef = 3359D89A1E53916B002707E6 /* lol.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3359D8861E538B6D002707E6 /* LeagueOfStatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeagueOfStatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3359D88A1E538B6D002707E6 /* LeagueOfStatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueOfStatsUITests.swift; sourceTree = "<group>"; };
 		3359D88C1E538B6D002707E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3359D89A1E53916B002707E6 /* lol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lol.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				3359D86A1E538B6D002707E6 /* AppDelegate.swift */,
 				3359D86C1E538B6D002707E6 /* ViewController.swift */,
 				3359D86E1E538B6D002707E6 /* Main.storyboard */,
+				3359D89A1E53916B002707E6 /* lol.png */,
 				3359D8711E538B6D002707E6 /* Assets.xcassets */,
 				3359D8731E538B6D002707E6 /* LaunchScreen.storyboard */,
 				3359D8761E538B6D002707E6 /* Info.plist */,
@@ -235,6 +238,7 @@
 				3359D8751E538B6D002707E6 /* LaunchScreen.storyboard in Resources */,
 				3359D8721E538B6D002707E6 /* Assets.xcassets in Resources */,
 				3359D8701E538B6D002707E6 /* Main.storyboard in Resources */,
+				3359D89B1E53916B002707E6 /* lol.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
