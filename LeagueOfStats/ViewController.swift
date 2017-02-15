@@ -9,7 +9,6 @@
 import UIKit
 var invocador = ""
 class ViewController: UIViewController {
-    
     @IBOutlet weak var textoInvocador: UITextField!
     
     override func viewDidLoad() {
