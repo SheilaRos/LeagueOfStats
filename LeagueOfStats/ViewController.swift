@@ -7,10 +7,12 @@
 //
 
 import UIKit
-var invocador = ""
+
 class ViewController: UIViewController {
     @IBOutlet weak var textoInvocador: UITextField!
     @IBOutlet weak var prueba: UILabel!
+    var palabra = ""
+    var id = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,16 +20,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func entrar(_ sender: UIButton) {
-        invocador  = textoInvocador.text!.lowercased()
-        var letras = [invocador.characters] as [String]
-        var volcado =[String]()
-        var cont = 0
+        var invocador  = textoInvocador.text!.lowercased()
+        var letras = Array(invocador.characters)
+        var volcado = [Character]()
         for i in 0...letras.count-1 {
             if (letras[i] != " ") {
-                volcado[cont] = letras[i]
-                cont += 1
+                volcado.append(letras[i])
             }
         }
+        palabra = String(volcado)
         downloadPlayerId()
         
     }
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func downloadPlayerId(){
-        let url = URL(string: "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/" + invocador + "?api_key=RGAPI-3a39327e-3d10-42c6-87b6-eb4ef96168a3")
+        let url = URL(string: "https://euw.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/" + palabra + "?api_key=RGAPI-3a39327e-3d10-42c6-87b6-eb4ef96168a3")
         let request = URLRequest(url: url!)
         URLSession.shared.dataTask(with:url!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
@@ -45,10 +46,11 @@ class ViewController: UIViewController {
             if (statusCode == 200){
             do {
                 let json = try JSONSerialization.jsonObject(with: data) as! [String:Any]
-                let summoner = json[invocador] as! [String:Any]
+                let summoner = json[self.palabra] as! [String:Any]
                 print(summoner)
-                let id = summoner["id"]!
-                print(id)
+                let getid = summoner["id"]!
+                self.id = String(describing: getid)
+                print(self.id)
                 self.prueba.text = "funca"
                 
             } catch let error as NSError {
